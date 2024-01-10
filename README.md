@@ -2,6 +2,27 @@
 
 Flexfuel adapter for 4 cylinder gasoline engine with indirect injection.
 
+## Instructions
+
+To change GPIO and peripheral parameters, open `stm_config.ioc` using STM32CubeMX.
+
+You need stm32pio: 
+```
+pip install stm32pio
+```
+
+For more details about stm32pio follow: https://github.com/ussserrr/stm32pio
+
+In PlatformIO CLI run:
+```
+stm32pio generate
+```
+
+Once STM32CubeMX generation is done run:
+```
+./main_to_driver.sh
+```
+
 ## Calculation of extra injection time
 
 ### Ethanol AFR

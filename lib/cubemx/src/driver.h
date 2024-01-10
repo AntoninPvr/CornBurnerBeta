@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.h
+  * @file           : driver.h
   * @brief          : Header for main.c file.
   *                   This file contains the common defines of the application.
   ******************************************************************************
@@ -53,6 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
+int driver(void);
 
 /* USER CODE END EFP */
 
