@@ -1,6 +1,8 @@
 #ifndef INJECTOR_H
 #define INJECTOR_H
 
+#include "driver.h"
+
 volatile uint32_t time_init[] = {0, 0, 0, 0};
 volatile uint32_t time_end[] = {0, 0, 0, 0};
 

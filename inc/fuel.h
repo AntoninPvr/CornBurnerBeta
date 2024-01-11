@@ -1,6 +1,8 @@
 #ifndef FUEL_H
 #define FUEL_H
 
+#include "driver.h"
+
 const float afr_ethanol = 9.0f;
 const float afr_gasoline = 14.7f;
 const float flashpoint_ethanol = 13.0f;
