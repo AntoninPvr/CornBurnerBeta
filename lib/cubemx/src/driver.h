@@ -64,12 +64,16 @@ int driver(void);
 #define AMBIENT_TEMP_GPIO_Port GPIOA
 #define INJ_IN_0_Pin GPIO_PIN_12
 #define INJ_IN_0_GPIO_Port GPIOB
+#define INJ_IN_0_EXTI_IRQn EXTI15_10_IRQn
 #define INJ_IN_1_Pin GPIO_PIN_13
 #define INJ_IN_1_GPIO_Port GPIOB
+#define INJ_IN_1_EXTI_IRQn EXTI15_10_IRQn
 #define INJ_IN_2_Pin GPIO_PIN_14
 #define INJ_IN_2_GPIO_Port GPIOB
+#define INJ_IN_2_EXTI_IRQn EXTI15_10_IRQn
 #define INJ_IN_3_Pin GPIO_PIN_15
 #define INJ_IN_3_GPIO_Port GPIOB
+#define INJ_IN_3_EXTI_IRQn EXTI15_10_IRQn
 #define INJ_OUT_0_Pin GPIO_PIN_10
 #define INJ_OUT_0_GPIO_Port GPIOA
 #define INJ_OUT_1_Pin GPIO_PIN_11
