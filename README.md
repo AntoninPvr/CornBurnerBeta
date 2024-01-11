@@ -1,4 +1,4 @@
-# CornBurner Alpha
+# CornBurner Beta
 
 Flexfuel adapter for 4 cylinder gasoline engine with indirect injection.
 
