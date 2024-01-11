@@ -15,13 +15,9 @@ For more details about stm32pio follow: https://github.com/ussserrr/stm32pio
 
 In PlatformIO CLI run:
 ```
-stm32pio generate
+./update_config.sh
 ```
 
-Once STM32CubeMX generation is done run:
-```
-./main_to_driver.sh
-```
 
 ## Calculation of extra injection time
 

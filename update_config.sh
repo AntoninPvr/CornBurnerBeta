@@ -9,6 +9,12 @@ src="./lib/cubemx/src/"
 main="main.h"
 driver="driver.h"
 
+# clean src directory
+rm -rf "$src"
+
+# generate code with CubeMX
+stm32pio generate
+
 # move Src to src
 if [ -d "./lib/cubemx/Src" ]; then
     mv ./lib/cubemx/Src ./lib/cubemx/src
