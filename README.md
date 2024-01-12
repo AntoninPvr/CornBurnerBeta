@@ -4,7 +4,7 @@ Flexfuel adapter for 4 cylinder gasoline engine with indirect injection.
 
 ## Instructions
 
-To change GPIO and peripheral parameters, open `stm_config.ioc` using STM32CubeMX.
+Only to change GPIO and peripheral parameters, open `stm_config.ioc` using STM32CubeMX.
 
 You need stm32pio: 
 ```
