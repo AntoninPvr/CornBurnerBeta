@@ -8,3 +8,4 @@ float computeEnrichment(float ethanol) {
 float flashpoint(float ethanol) {
     return flashpoint_ethanol*ethanol + (1-ethanol)*flashpoint_gasoline;
 }
+

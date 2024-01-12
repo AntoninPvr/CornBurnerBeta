@@ -74,6 +74,8 @@ int driver(void);
 #define INJ_IN_3_Pin GPIO_PIN_15
 #define INJ_IN_3_GPIO_Port GPIOB
 #define INJ_IN_3_EXTI_IRQn EXTI15_10_IRQn
+#define ETH_IN_Pin GPIO_PIN_8
+#define ETH_IN_GPIO_Port GPIOA
 #define INJ_OUT_0_Pin GPIO_PIN_10
 #define INJ_OUT_0_GPIO_Port GPIOA
 #define INJ_OUT_1_Pin GPIO_PIN_11

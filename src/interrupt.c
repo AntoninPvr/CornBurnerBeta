@@ -1,6 +1,5 @@
-#include "injector.h"
+#include "interrupt.h"
 #include "gpio.h"
-#include "driver.h"
 #include "tim.h"
 
 // Firing order: 1-3-4-2 : 0-2-3-1
@@ -54,6 +53,17 @@ void HAL_GPTIO_EXTI_Callback(uint16_t GPIO_Pin) {
         else {
             inj_time[3] = __HAL_TIM_GET_COUNTER(&htim3);
             __HAL_TIM_SET_COUNTER(&htim3, (uint16_t) 65536 - (inj_time[3] * enrichment));
+        }
+        break;
+    case ETH_IN_Pin: // Ethanol
+        if (HAL_GPIO_ReadPin(ETH_IN_GPIO_Port, ETH_IN_Pin) == GPIO_PIN_SET) {
+            ethanol_period = __HAL_TIM_GET_COUNTER(&htim9);
+            HAL_TIM_Base_Start(&htim9);
+            __HAL_TIM_SET_COUNTER(&htim9, 0);
+        }
+        else {
+            ethanol_pulse_width = __HAL_TIM_GET_COUNTER(&htim9);
+            __HAL_TIM_SET_COUNTER(&htim9, 0);
         }
         break;
     default:
