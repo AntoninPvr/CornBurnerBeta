@@ -61,8 +61,10 @@ void updateFuelTemp() {
 void coldStart() {
     if (fuel_temp < flashpoint(ethanol_prop) + cold_start_offset) {
         need_cold_start = 1;
+        HAL_GPIO_WritePin(LED_COLD_START_GPIO_Port, LED_COLD_START_Pin, GPIO_PIN_SET);
     }
     else {
         need_cold_start = 0;
+        HAL_GPIO_WritePin(LED_COLD_START_GPIO_Port, LED_COLD_START_Pin, GPIO_PIN_RESET);
     }
 }

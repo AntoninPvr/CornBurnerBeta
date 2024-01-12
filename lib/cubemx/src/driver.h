@@ -62,6 +62,10 @@ int driver(void);
 #define ENGINE_TEMP_GPIO_Port GPIOA
 #define AMBIENT_TEMP_Pin GPIO_PIN_1
 #define AMBIENT_TEMP_GPIO_Port GPIOA
+#define LED_ERROR_Pin GPIO_PIN_2
+#define LED_ERROR_GPIO_Port GPIOB
+#define LED_COLD_START_Pin GPIO_PIN_10
+#define LED_COLD_START_GPIO_Port GPIOB
 #define INJ_IN_0_Pin GPIO_PIN_12
 #define INJ_IN_0_GPIO_Port GPIOB
 #define INJ_IN_0_EXTI_IRQn EXTI15_10_IRQn
