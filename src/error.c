@@ -1,5 +1,4 @@
 #include "error.h"
-#include "fuel.h"
 
 void check_error() {
     uint32_t error_sum = 0;
