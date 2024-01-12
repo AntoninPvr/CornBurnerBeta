@@ -3,9 +3,10 @@
 
 #include "driver.h"
 
-volatile uint32_t time_init[] = {0, 0, 0, 0};
-volatile uint32_t time_end[] = {0, 0, 0, 0};
+volatile uint16_t inj_time[] = {0, 0, 0, 0};
 
 volatile uint8_t injector_state[] = {0, 0, 0, 0};
+
+volatile float enrichment = 0.2f;
 
 #endif // INJECTOR_H
