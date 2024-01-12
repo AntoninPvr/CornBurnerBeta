@@ -20,3 +20,15 @@ uint32_t NTC_temp_LUT(uint32_t adc_value) {
     };
     return((uint32_t)lut[adc_value/(4096/sizeof(lut))]);
 }
+
+void update_adc_buffer() {
+    HAL_ADC_Start_DMA(&hadc1, buffer_dma_adc, 2);
+}
+
+void engine_temp_update() {
+    engine_temp = NTC_temp_LUT(buffer_dma_adc[0]);
+}
+
+void ambient_temp_update() {
+    ambient_temp = NTC_temp_LUT(buffer_dma_adc[1]);
+}

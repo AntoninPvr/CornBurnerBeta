@@ -8,7 +8,7 @@
 extern volatile uint16_t ethanol_period;
 extern volatile uint16_t ethanol_pulse_width;
 
-uint32_t ethanol_prop();
-uint32_t fuel_temp();
+float read_ethanol_prop();
+float read_fuel_temp();
 
 #endif // ETHANOL_SENSOR_H
