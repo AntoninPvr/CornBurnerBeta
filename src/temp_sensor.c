@@ -33,6 +33,6 @@ void ambient_temp_update() {
     ambient_temp = NTC_temp_LUT(buffer_dma_adc[1]);
 }
 
-void uc_temp_sensor_update() {
+void uc_temp_update() {
     uc_temp = (((V25 - (buffer_dma_adc[2]*VSENSE)) / AVG_SLOPE) + 25);
 }

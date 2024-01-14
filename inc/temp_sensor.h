@@ -19,5 +19,6 @@ uint32_t NTC_temp_LUT(uint32_t adc_value);
 void update_adc_buffer();
 void engine_temp_update();
 void ambient_temp_update();
-void uc_temp_sensor_update();
+void uc_temp_update();
+
 #endif // TEMP_SENSOR_H
