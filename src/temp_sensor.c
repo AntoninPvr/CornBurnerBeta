@@ -22,7 +22,7 @@ uint32_t NTC_temp_LUT(uint32_t adc_value) {
 }
 
 void update_adc_buffer() {
-    HAL_ADC_Start_DMA(&hadc1, buffer_dma_adc, 2);
+    HAL_ADC_Start_DMA(&hadc1, buffer_dma_adc, 3);
 }
 
 void engine_temp_update() {
@@ -31,4 +31,8 @@ void engine_temp_update() {
 
 void ambient_temp_update() {
     ambient_temp = NTC_temp_LUT(buffer_dma_adc[1]);
+}
+
+void uc_temp_sensor_update() {
+    uc_temp = (((V25 - (buffer_dma_adc[2]*VSENSE)) / AVG_SLOPE) + 25);
 }
